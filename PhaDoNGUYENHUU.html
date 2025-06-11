@@ -1,0 +1,393 @@
+<!--
+Nếu độ rộng tập tin html không đủ nên phả đồ bị chia xuống hàng
+Hãy tăng thêm độ rộng width trong thẻ <div class='tree' style='width:500%;overflow:auto;'>
+Tác Giả Phần Mềm : Bùi Tiến Trường - SĐT : 0989995221
+-->
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Pha Do NGUYEN HUU BONG - Phan Mem Soan Pha - Truongbt</title>
+<style>
+* {margin: 0; padding: 0;}
+.tree ul {
+    padding: 40px 3px 0 5px;
+    position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+.tree li {
+    float: left; text-align: center;
+    list-style-type: none; 
+    position: relative;
+    padding: 40px 5px 0 5px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+.tree li::before, .tree li::after{
+    content: '';
+    position: absolute; top: 0; right: 50%;
+    border-top: 1px solid #000;
+    width: 50%; height: 40px
+}
+.tree li::after{
+    right: auto; left: 50%;
+    border-left: 1px solid #000;
+}
+.tree li:only-child::after, .tree li:only-child::before {
+}
+.tree li:only-child{ }
+.tree li:first-child::before, .tree li:last-child::after{
+    border: 0px none;
+}
+.tree li:last-child::before{
+    border-right: 1px solid #000;
+    border-radius: 0 0px 0 0;
+    -webkit-border-radius: 0 0px 0 0;
+    -moz-border-radius: 0 0px 0 0;
+}
+.tree li:first-child::after{
+    border-radius: 0px 0 0 0;
+    -webkit-border-radius: 0px 0 0 0;
+    -moz-border-radius: 0px 0 0 0;
+}
+.tree ul ul::before{
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    border-left: 1px solid #000;
+    width: 0; height: 40px
+}
+.tree li a{
+    height : 70px;
+    width : 150px;
+    background-image: url('./Images/Khung.jpg');
+    border: 1px solid #000;
+    padding: 10px 5px 10px 5px;
+    text-decoration: none;
+    color: #000;
+    font-family: arial, verdana, tahoma;
+    font-size: 14px;
+	font-weight: bold;
+    display: inline-block;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+.tree li a:hover, .tree li a:hover+ul li a {
+    background: #66FF00; color: #000; border: 1px solid #94a0b4;
+}
+.tree li a:hover+ul li::after,
+.tree li a:hover+ul li::before,
+.tree li a:hover+ul::before,
+.tree li a:hover+ul ul::before{
+    border-color:  #000;
+}
+.tree{
+	background-image: url('./Images/NenGP.jpeg');
+	padding-bottom: 70px;
+}
+h1{
+	padding-top: 50px;
+	padding-left: 70px;
+	text-align: left;
+	color: red;
+	font-size: 40px
+}
+body {
+  transform: scale(0.7);  /* Thu nhỏ trang web xuống 90% */
+  transform-origin: top left;  /* Đảm bảo việc thu nhỏ diễn ra từ góc trên bên trái */
+}
+</style>
+</head>
+<body>
+<div class="tree" style="width:1500%;overflow:auto;">
+<h1>PHẢ ĐỒ HỌ "NGUYỄN HỮU"</h1>
+<ul>
+<li><a href="#">Nguyễn Hữu Bổng<br><br><br>Đỗ Thị Hưởng<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Phu<br><br><br>Hiệu Từ Tiến<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Gầy<br><br><br>Nguyễn Thị Mai<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Xuân<br><br><br>Hiệu Diệu Thính<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Đoài<br><br><br>Nguyễn Thị Cả<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Giới<br><br><br>Hiệu Từ Trại<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Bắc<br><br><br>Nguyễn Thị Bốn<br></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Mẫn<br><br><br>Đỗ Thị Lớn<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Bối<br><br><br>Hoàng Thị Ế<br></a>
+<ul>
+<li><a href="#">Bùi Đức Tuế<br><br><br>Dương Thị Lịch<br></a>
+<ul>
+<li><a href="#">Bùi Đức Tạo<br><br><br>Dương Thị Nhẫn<br></a>
+<ul>
+<li><a href="#">Bùi Đức Tuấn<br><br><br><br></a></li>
+<li><a href="#">Bùi Thị Phương<br><br><br><br></a></li>
+<li><a href="#">Bùi Thị Hiền<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Văn Hòe (N)<br><br><br>Đinh Thị Phương<br></a>
+<ul>
+<li><a href="#">Nguyễn Kim Anh<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Văn Huy<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Bùi Đức Thịnh<br><br><br>Dương Thị Thu<br></a>
+<ul>
+<li><a href="#">Bùi Đức Thành<br><br><br><br></a></li>
+<li><a href="#">Bùi Đức Hùng<br><br><br><br></a></li>
+<li><a href="#">Bùi Đức May (N)<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Bùi Thị Sự<br><br><br>Hoàng Văn Phú<br></a>
+<ul>
+<li><a href="#">Hoàng Văn Khánh<br><br><br><br></a></li>
+<li><a href="#">Hoàng Văn Tiến<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Bùi Thị Tình<br><br><br>Ngô Duy Thu<br></a>
+<ul>
+<li><a href="#">Ngô Duy Lượng<br><br><br><br></a></li>
+<li><a href="#">Ngô Duy Luân<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Bùi Đức Thư<br><br><br>Nguyễn Thị Thúy<br></a>
+<ul>
+<li><a href="#">Bùi Đức Dương<br><br><br><br></a></li>
+<li><a href="#">Bùi Thị Dung<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Bùi Thị Sáu<br><br><br>Hoàng Văn Tình<br></a>
+<ul>
+<li><a href="#">Hoàng Văn Bình<br><br><br><br></a></li>
+<li><a href="#">Hoàng Văn Minh<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Bùi Đức Hải<br><br><br>Phạm Thị Hà<br></a>
+<ul>
+<li><a href="#">Bùi Thị Giang<br><br><br><br></a></li>
+<li><a href="#">Bùi Minh Đức<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Bùi Đức Sơn<br><br><br>Đỗ Hồng Hạnh<br></a>
+<ul>
+<li><a href="#">Bùi Sơn Nam<br><br><br><br></a></li>
+<li><a href="#">Bùi Đức Quân<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Bùi Thị Thủy<br><br><br>Bùi Văn Hưng<br></a>
+<ul>
+<li><a href="#">Bùi Văn Chung<br><br><br><br></a></li>
+<li><a href="#">Bùi Thu Hường<br><br><br><br></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Thị Vừng<br><br><br>Hạ Văn Hóng<br></a>
+<ul>
+<li><a href="#">Hạ Văn Kim<br><br><br>Nguyễn Thị Hàn<br></a>
+<ul>
+<li><a href="#">Hạ Thị Sửu<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Kỳ<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Bình<br><br><br><br></a></li>
+<li><a href="#">Hạ Văn Thân<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Dục<br><br><br><br></a></li>
+<li><a href="#">Hạ Văn Lâm<br><br><br><br></a></li>
+<li><a href="#">Hạ Văn Dũng<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Hạ Văn Bốc<br><br><br>Nguyễn Thị Quyên<br></a>
+<ul>
+<li><a href="#">Hạ Văn Hùng<br><br><br><br></a></li>
+<li><a href="#">Hạ Văn Dũng<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Ngân<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Trâm<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Hằng<br><br><br><br></a></li>
+<li><a href="#">Hạ Văn Mạnh<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Hạ Văn Tý<br><br><br>Nguyễn Thị Quyên<br></a>
+<ul>
+<li><a href="#">Hạ Thị Phương<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Mai<br><br><br><br></a></li>
+<li><a href="#">Hạ Văn Mạnh<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Hằng<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Thúy<br><br><br><br></a></li>
+<li><a href="#">Hạ Văn Quy<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Hạ Thị Thạch<br><br><br><br></a>
+<ul>
+<li><a href="#">Hạ Thị Phương<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Mai<br><br><br><br></a></li>
+<li><a href="#">Hạ Văn Mạnh<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Hằng<br><br><br><br></a></li>
+<li><a href="#">Hạ Thị Thúy<br><br><br><br></a></li>
+<li><a href="#">Hạ Văn Quy<br><br><br><br></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Cát<br><br><br>Bùi Thị Mít<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Tâm<br><br><br>Ngô Thị Chúc<br></a>
+<ul>
+<li><a href="#">Nguyễn Thị Nhung<br><br><br>Nguyễn Công Sức<br></a>
+<ul>
+<li><a href="#">Nguyễn Công Chiến<br><br><br>Nguyễn Thị Kim Anh<br></a></li>
+<li><a href="#">Nguyễn Minh Thu<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Thắng<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Vinh<br><br><br>Nguyễn Thị Tuất<br></a>
+<ul>
+<li><a href="#">Nguyễn Quốc Việt<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Giang<br><br><br>Nguyễn Trọng Trinh<br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Quang<br><br><br>Nguyễn Thị Khanh<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Nam<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Huyền Trang<br><br><br>Nguyễn Văn Toàn<br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Thị Hạnh<br><br><br>Chu Văn Hào<br></a>
+<ul>
+<li><a href="#">Chu Văn Đức<br><br><br><br></a></li>
+<li><a href="#">Chu Đông Hải<br><br><br><br></a></li>
+<li><a href="#">Chu Diệu Linh <br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Phúc<br><br><br>Lê Thị Vĩnh<br></a>
+<ul>
+<li><a href="#">Nguyễn Thị Hằng<br><br><br>Nguyễn Văn Thiết<br></a></li>
+<li><a href="#">Nguyễn Thị Nga<br><br><br>Nguyễn Văn Dũng<br></a></li>
+<li><a href="#">Nguyễn Hữu Lộc<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Thị Hòa<br><br><br>Nguyễn Hoàng Quang<br></a>
+<ul>
+<li><a href="#">Nguyễn Hoàng Yến<br><br><br>Nguyễn Hoàng Hải<br></a></li>
+<li><a href="#">Nguyễn Hoàng Dũng<br><br><br>Nguyễn Thị Huyền Trang<br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Bình<br><br><br>Trần Thị Đông<br>( 1975 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</a>
+<ul>
+<li><a href="#">Nguyễn Hữu Phương<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Phương Ngọc<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Minh<br><br><br>Nguyễn Thị Hoa<br></a>
+<ul>
+<li><a href="#">Nguyễn Thu Huyền<br><br><br>Nguyễn Văn Cường<br></a></li>
+<li><a href="#">Nguyễn Hữu Thành<br><br><br><br></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Tỉnh<br><br><br>Nguyễn Thị Quý<br></a>
+<ul>
+<li><a href="#">Nguyễn Thị Tuyết<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Mai<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Tuấn<br><br><br>Nguyễn Thị Thủy<br></a>
+<ul>
+<li><a href="#">Nguyễn Quang Huy<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Ánh<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Thị Tú<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Anh<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Oanh<br><br><br>Tuấn<br></a></li>
+<li><a href="#">Nguyễn Hữu Tài<br><br><br>Nguyễn Thị Ngọc<br></a>
+<ul>
+<li><a href="#">Nguyễn Nam Khánh<br><br><br><br></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Kỷ<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Thuồi<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Hoan<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Khoát<br><br><br><br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Trường<br><br><br>Lê Thị Sơn<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Khôi<br><br><br><br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Xướng<br><br><br><br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Cần<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Luân<br><br><br><br></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Mão<br><br><br><br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Cường<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Vinh<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Doanh<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Ngọ<br><br><br><br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Thọ<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Khang<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Minh<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Thăng<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu <br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Hoành<br><br><br>Nguyễn Thị Nhuần<br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Thụy<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Nghĩa<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Vân<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Đại<br><br><br><br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Niên<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Tạo<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Hữu Sơn<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Kim<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Thân<br><br><br><br></a></li>
+</ul>
+</li>
+<li><a href="#">Nguyễn Hữu Cao<br><br><br><br></a>
+<ul>
+<li><a href="#">Nguyễn Hữu Côn<br><br><br><br></a></li>
+<li><a href="#">Nguyễn Thị Yến<br><br><br><br></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
+
+</body></html>
